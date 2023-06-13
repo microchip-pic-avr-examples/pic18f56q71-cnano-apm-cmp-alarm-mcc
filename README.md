@@ -19,19 +19,19 @@ More details and code examples on the PIC18F56Q71 can be found at the following 
 
 ## Hardware Used
 
-- The PIC18F56Q71 Curiosity Nano Development board is used as a test platform:
+- The [PIC18F56Q71 Curiosity Nano](https://www.microchip.com/en-us/development-tool/EV01G21A) development board is used as a test platform:
   <br><img src="images/pic18f56q71-curiosity-nano-board.png">
 
-- Curiosity Nano Adapter:
+- [Curiosity Nano Adapter](https://www.microchip.com/en-us/development-tool/AC164162):
   <br><img src="images/Curiosity-Nano-Adapter.jpg" height="400">
 
-- POT 3 CLICK board (mikroBUS socket 1):
+- [POT 3 CLICK](https://www.mikroe.com/pot-3-click) board (mikroBUS socket 1):
   <br><img src="images/pot-3-click-board.jpg" height="400">
 
-- AMBIENT CLICK board (mikroBUS socket 2):
+- [AMBIENT CLICK](https://www.mikroe.com/ambient-click) board (mikroBUS socket 2):
   <br><img src="images/ambient-click-board.jpg" height="400">
 
-- BUZZ CLICK board (mikroBUS socket 3):
+- [BUZZ CLICK](https://www.mikroe.com/buzz-click) board (mikroBUS socket 3):
   <br><img src="images/buzz-click-board.jpg" height="400">
 <br>
 
