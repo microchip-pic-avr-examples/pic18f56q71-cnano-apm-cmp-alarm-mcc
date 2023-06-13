@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f56q71-cnano-apm-cmp-alarm-mcc",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "Analog Peripheral Manager (APM) — Light-sensing alarm with CMP and APM using PIC18F56Q71 Microcontroller with MCC Melody",
         "projectName": "pic18f56q71-cnano-apm-cmp-alarm-mcc",
         "shortDescription": "PIC18F Q71 - Basic Configurations of the APM. Using the APM to periodically toggle the Comparator peripheral to measure an analog signal and trigger an alarm once the measured level reaches the threshold set by the user.",
         "ide": {
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC18F-Q_DFP",
+            "semverRange": "^1.18.389"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=5.3.7"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -37,8 +37,8 @@
             }
         },
         "author": "Mihai Alexandru Ricanu",
-        "peripherals": [],
-        "keywords": [],
+        "peripherals": ["APM","CMP","PWM"],
+        "keywords": ["APM"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
