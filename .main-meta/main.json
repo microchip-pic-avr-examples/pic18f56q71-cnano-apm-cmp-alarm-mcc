@@ -38,7 +38,7 @@
         },
         "author": "Mihai Alexandru Ricanu",
         "peripherals": ["APM","CMP","PWM"],
-        "keywords": ["APM"],
+        "keywords": ["alarm"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
