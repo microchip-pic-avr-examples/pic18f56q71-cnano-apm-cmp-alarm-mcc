@@ -2,7 +2,7 @@
 
 # Analog Peripheral Manager (APM) — Light-sensing alarm with CMP and APM using PIC18F56Q71 Microcontroller with MCC Melody
 
-This code example demonstrates one use case of the Analog Peripheral Manager (APM) and showcases its configuration in MCC Melody. The Comparator peripheral (CMP) along with the APM are used to create a ligth-sensing alarm. Two Click boards, a POT 3 potentiometer and an AMBIENT light sensor, supply the Comparator's input signals. The Comparator’s output signal and a PWM signal are inputs to the Configurable Logic Cell (CLC) module set up as an AND gate whose output drives a BUZZ Click board. The potentiometer is used to set the threshold at which the speaker is driven. The APM will switch the Comparator on and off based on the specified period and event timings.
+This code example demonstrates one use case of the Analog Peripheral Manager (APM) and showcases its configuration in MCC Melody. The Comparator peripheral (CMP) and the APM are used to create a ligth-sensing alarm. Two Click boards, a POT 3 potentiometer, and an AMBIENT light sensor supply the Comparator's input signals. The Comparator’s output signal and a PWM signal are inputs to the Configurable Logic Cell (CLC) module set up as an AND gate whose output drives a BUZZ Click board. The potentiometer sets the threshold at which the speaker is driven. The APM will switch the Comparator on and off based on the specified period and event timings.
 
 ## Related Documentation
 
@@ -65,7 +65,7 @@ The following configurations must be made for this project:
 - PWM2:
   - Enable PWM: No
   - Clock Source: LFINTOSC
-  - Clock Prescaler: Prescale by 10
+  - Clock Prescaler: 10
   - Mode: Left aligned mode
   - Requested Frequency: 0.5 kHz
   - Output1 Duty Cycle: 50%
@@ -79,7 +79,7 @@ The following configurations must be made for this project:
 - APM:
   - Enable APM: Yes
   - Clock Source: LFINTOSC
-  - Requested Period: 10 s
+  - Requested Period: 10s
   - APM Events:
     - Start 1: enable CMP1
     - End 1: disable CMP1
@@ -129,7 +129,7 @@ This code example shows how to configure the APM to toggle the CMP and create a 
 
 ## How to Program the Curiosity Nano Board
 
-This chapter demonstrates how to use the MPLAB® X IDE to program a PIC® device with an Example_Project.X. This is applicable to other projects.
+This chapter demonstrates how to use the MPLAB X IDE to program a PIC® device with an Example_Project.X. This applies to other projects.
 
 1.  Connect the board to the PC.
 
