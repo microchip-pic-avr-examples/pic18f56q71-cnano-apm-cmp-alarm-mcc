@@ -40,7 +40,6 @@ void CMP1_InterruptHandler(void)
 {
     if(CMP1_GetOutputStatus() == true)      /* make sure positive edge interrupt occurred */ 
     {
-        PWM2_16BIT_Enable();
         LED_SetLow();                       /* turn LED on when speaker is driven*/
     }
 }
@@ -49,7 +48,6 @@ void PWM2_InterruptHandler(void)
 {
     if(CMP1_GetOutputStatus() == false)     /* check if Comparator outputs '0' */
     {    
-        PWM2_16BIT_Disable();
         LED_SetHigh();                      /* turn LED off when speaker is not driven */
     }
 }

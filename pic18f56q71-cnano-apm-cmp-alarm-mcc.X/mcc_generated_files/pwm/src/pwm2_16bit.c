@@ -114,8 +114,8 @@ void PWM2_16BIT_Initialize(void)
     PWM2_16BIT_Slice1Output2_SetInterruptHandler(PWM2_16BIT_Slice1Output2_DefaultInterruptHandler);
     PWM2_16BIT_Period_SetInterruptHandler(PWM2_16BIT_Period_DefaultInterruptHandler);
 
-    //PWMEN disabled; PWMLD disabled; PWMERSPOL disabled; PWMERSNOW disabled; 
-    PWM2CON = 0x0;
+    //PWMEN enabled; PWMLD disabled; PWMERSPOL disabled; PWMERSNOW disabled; 
+    PWM2CON = 0x80;
 }
 
 void PWM2_16BIT_Enable()

@@ -15,7 +15,7 @@ More details and code examples on the PIC18F56Q71 can be found at the following 
 
 - [MPLAB® X IDE](http://www.microchip.com/mplab/mplab-x-ide) v6.10 or newer
 - [MPLAB® XC8](http://www.microchip.com/mplab/compilers) v2.41 or newer
-- [PIC18F-Q Series Device Pack](https://packs.download.microchip.com/) v1.18.389 or newer
+- [PIC18F-Q Series Device Pack](https://packs.download.microchip.com/) v1.19.401 or newer
 
 ## Hardware Used
 
@@ -47,10 +47,19 @@ The following configurations must be made for this project:
   - Clock Source: HFINTOSC
   - HF Internal Clock: 1 MHz
   - Clock Divider: 1
+
+  <br><img src="images/case1_clock_control.PNG" width="600">
+
 - Configuration bits:
   - WDT operating mode: WDT Disabled
+
+  <br><img src="images/case1_configuration_bits.PNG" width="600">
+
 - Interrupt Manager:
   - Enable Vectored Interrupt: Yes
+
+  <br><img src="images/case1_interrupt_manager.PNG" width="600">
+
 - CMP1:
   - Enable Comparator: No
   - Mode: asynchronous
@@ -62,6 +71,9 @@ The following configurations must be made for this project:
   - Enable Comparator Interrupt: Yes
   - Enable Rising Edge Interrupt: intFlag_pos
   - Enable Falling Edge Interrupt: no_intFlag
+
+  <br><img src="images/case1_comparator.PNG" width="600">
+
 - PWM2:
   - Enable PWM: No
   - Clock Source: LFINTOSC
@@ -71,11 +83,18 @@ The following configurations must be made for this project:
   - Output1 Duty Cycle: 50%
   - Period Interrupt Enable: Yes
   - Period Interrupt Postscaler: No postscale
+
+  <br><img src="images/case1_pwm_1.PNG" width="600">
+  <br><img src="images/case1_pwm_2.PNG" width="600">
+
 - CLC3:
   - Enable CLC: Yes
   - Logic Cell Mode bits: AND-OR
   - First OR gate input: PWM2_OUT1
-  - Second OR gate input: CMP1_OUT   
+  - Second OR gate input: CMP1_OUT
+
+  <br><img src="images/case1_clc.PNG" width="600">
+
 - APM:
   - Enable APM: Yes
   - Clock Source: LFINTOSC
@@ -90,6 +109,11 @@ The following configurations must be made for this project:
   - Requested Start 2: 0s
   - Requested End2: 3s
 
+  <br><img src="images/case1_apm_1.PNG" width="600">
+  <br><img src="images/case1_apm_2.PNG" width="600">
+
+    The configured APM period is 10s. The Start 1 event, which enables the Comparator peripheral, occurs 1 second after the period counter started. The End 1 event, which disables the Comparator, occurs 3 seconds after the Start 1 event. The Start 2 and End 2 events are not used in this case. Therefore, the Start 2 event timing is irrelevant, but the End 2 event must occur after or at the same time with the End 1 event.
+
 | Pin | Configuration  |        Description        |
 | :-: | :------------: | :-----------------------: |
 | RA1 |  Analog input  |        potentiometer      |
@@ -100,12 +124,14 @@ The following configurations must be made for this project:
 | RB3 | Digital output |   analog modules status   |
 | RC7 | Digital output |      speaker status       |
 
+<br><img src="images/case1_pin_grid.PNG" width="600">
+
 | Pin |     Label      |
 | :-: | :------------: |
 | RB3 |    APMStatus   |
 | RC7 |      LED       |
 
-<br>
+<br><img src="images/case1_pins_configuration.PNG" width="600">
 
 ## Demo
 
@@ -115,13 +141,13 @@ Board setup:
 
 Logic analyzer screen captures:
 
-<br><img src="images/case1_demo_1.PNG" width="1000">
-<br><img src="images/case1_demo_3.png" width="1000">
+<br><img src="images/case1_demo1.png" width="1000">
+<br><img src="images/case1_demo2.png" width="1000">
 
 
 ## Summary
 
-This code example shows how to configure the APM to toggle the CMP and create a light-sensing alarm. 
+This code example shows how to configure the APM to enable and disable the CMP and create a light-sensing alarm. 
 
 <br><br>
 [Back to Top](#analog-peripheral-manager-apm--light-sensing-alarm-with-cmp-and-apm-using-pic18f56q71-microcontroller-with-mcc-melody)

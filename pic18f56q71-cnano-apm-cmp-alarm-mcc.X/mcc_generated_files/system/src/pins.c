@@ -100,9 +100,9 @@ void PIN_MANAGER_Initialize(void)
     /**
     INLVLx registers
     */
-    INLVLA = 0xF1;
-    INLVLB = 0xF1;
-    INLVLC = 0x7F;
+    INLVLA = 0xFF;
+    INLVLB = 0xFF;
+    INLVLC = 0xFF;
     INLVLD = 0xFF;
     INLVLE = 0xF;
     INLVLF = 0xFF;
