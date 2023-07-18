@@ -75,7 +75,7 @@ The following configurations must be made for this project:
   <br><img src="images/case1_comparator.PNG" width="600">
 
 - PWM2:
-  - Enable PWM: No
+  - Enable PWM: Yes
   - Clock Source: LFINTOSC
   - Clock Prescaler: 10
   - Mode: Left aligned mode
